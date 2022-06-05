@@ -1,0 +1,129 @@
+.header {
+
+    border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.logo-accent {
+    color: $brand-color;
+}
+
+.logo-link {
+    color: $title-color;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.logo-link--big-hover {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+}
+
+
+.navigation__list {
+    display: flex;
+
+    color: $title-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    list-style: none;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navigation__item {
+    position: relative;
+}
+
+.navigation__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: inherit;
+    text-decoration: none;
+
+    transition: color $transition-duration $transition-timing-function;
+}
+
+.navigation__link:hover,
+.navigation__link:focus,
+.contacts__link:hover,
+.contacts__link:focus {
+    color: $brand-color;
+}
+
+.contacts__list {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.contacts__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contacts__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+    color: $text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color $transition-duration $transition-timing-function;
+}
+
+.contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.navigation__link--bottom-border {
+    color: $brand-color;
+}
+
+.navigation__link--bottom-border::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -1px;
+
+
+    height: 4px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 2px;
+    background-color: $brand-color;
+}

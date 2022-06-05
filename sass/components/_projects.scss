@@ -1,0 +1,129 @@
+.projects-button {
+    padding: 6px 22px;
+    color: $title-color;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    border: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    transition: box-shadow $transition-duration $transition-timing-function,
+        background-color $transition-duration $transition-timing-function,
+        color $transition-duration $transition-timing-function;
+}
+
+.projects-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.projects-button:hover,
+.projects-button:focus {
+    color: $hero-color;
+    background-color: $brand-color;
+    cursor: pointer;
+}
+
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    list-style: none;
+}
+
+.pro-item {
+    margin: 15px;
+    transition: box-shadow $transition-duration $transition-timing-function;
+
+}
+
+.pro-item-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: box-shadow $transition-duration $transition-timing-function;
+}
+
+.pro-item-link:hover,
+.pro-item-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.pro-item a {
+    display: inline-block
+}
+
+.pro-item-title {
+    padding: 20px 24px 20px 24px;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+}
+
+.projects-name {
+    margin-bottom: 4px;
+    color: $title-color;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.projects-type {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.pro-item-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.pro-item:hover .image-text,
+.pro-item:focus .image-text {
+    transform: none;
+}
+
+
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $secondary-background;
+    padding: 63px 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    transform: translateY(100%);
+
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition: transform $transition-duration $transition-timing-function;
+}
