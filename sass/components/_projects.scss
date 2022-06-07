@@ -1,7 +1,16 @@
-.projects-button {
+.projects  {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+
+
+&-button {
     padding: 6px 22px;
     color: $title-color;
-    background-color: #f5f4fa;
+    background-color: $secondary-background;
     border-radius: 4px;
     border: 0;
     font-weight: 500;
@@ -13,37 +22,32 @@
     transition: box-shadow $transition-duration $transition-timing-function,
         background-color $transition-duration $transition-timing-function,
         color $transition-duration $transition-timing-function;
+        
+        &:hover,
+         &:focus {
+                color: $hero-color;
+                background-color: $brand-color;
+                cursor: pointer;
+            }
 }
 
-.projects-item:not(:last-child) {
-    margin-right: 8px;
+&-item {&:not(:last-child) {
+    margin-right: 8px; }
 }
 
-.projects-filter {
+&-filter {
     display: flex;
     justify-content: center;
     margin-top: 0px;
     margin-bottom: 50px;
 }
 
-.projects {
-    padding-top: 94px;
-    padding-bottom: 94px;
-
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 0px;
-}
-
-.projects-button:hover,
-.projects-button:focus {
-    color: $hero-color;
-    background-color: $brand-color;
-    cursor: pointer;
-}
 
 
-.projects-list {
+
+
+
+&-list {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -53,19 +57,24 @@
 .pro-item {
     margin: 15px;
     transition: box-shadow $transition-duration $transition-timing-function;
-
+&:hover .image-text,
+&:focus .image-text {
+        transform: none;
+    }
 }
 
 .pro-item-link {
     display: inline-block;
     text-decoration: none;
     transition: box-shadow $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
-.pro-item-link:hover,
-.pro-item-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 
 .pro-item a {
     display: inline-block
@@ -78,7 +87,7 @@
     border-right: 1px solid #EEEEEE;
 }
 
-.projects-name {
+&-name {
     margin-bottom: 4px;
     color: $title-color;
 
@@ -88,14 +97,14 @@
     letter-spacing: 0.06em;
 }
 
-.projects-type {
+&-type {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: $text-color;
 }
 
 .pro-item-wrap {
@@ -103,10 +112,7 @@
     overflow: hidden;
 }
 
-.pro-item:hover .image-text,
-.pro-item:focus .image-text {
-    transform: none;
-}
+
 
 
 .image-text {
@@ -123,7 +129,11 @@
     margin-bottom: 0px;
     transform: translateY(100%);
 
-    background-color: rgba(33, 150, 243, 0.9);
+    background-color: $bg-buttons-color-hover;
 
     transition: transform $transition-duration $transition-timing-function;
+
+   
+}
+ 
 }

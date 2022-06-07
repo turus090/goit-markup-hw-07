@@ -24,19 +24,18 @@
 .logo-link {
     color: $title-color;
 
-    font-family: Raleway, sans-serif;
+    font-family: $secondary-font;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
-}
-
-.logo-link--big-hover {
+    &--big-hover {
     display: block;
     padding-top: 24px;
     padding-bottom: 25px;
     margin-right: 93px;
+}
 }
 
 
@@ -52,12 +51,12 @@
     list-style: none;
 }
 
-.navigation__item:not(:last-child) {
-    margin-right: 50px;
-}
 
 .navigation__item {
     position: relative;
+    &:not(:last-child) {
+            margin-right: 50px;
+        }
 }
 
 .navigation__link {
@@ -69,13 +68,30 @@
     text-decoration: none;
 
     transition: color $transition-duration $transition-timing-function;
+
+
+&:hover,
+&:focus {
+    color: $brand-color;
+}
+&--bottom-border {
+    color: $brand-color;
 }
 
-.navigation__link:hover,
-.navigation__link:focus,
-.contacts__link:hover,
-.contacts__link:focus {
-    color: $brand-color;
+&--bottom-border::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -1px;
+
+
+    height: 4px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 2px;
+    background-color: $brand-color;
+}
 }
 
 .contacts__list {
@@ -84,8 +100,9 @@
     align-items: center;
 }
 
-.contacts__item:not(:last-child) {
+.contacts__item {&:not(:last-child) {
     margin-right: 50px;
+}
 }
 
 .contacts__link {
@@ -102,6 +119,10 @@
     text-decoration: none;
 
     transition: color $transition-duration $transition-timing-function;
+    &:hover,
+    &:focus {
+            color: $brand-color;
+        }
 }
 
 .contacts__icon {
@@ -109,21 +130,6 @@
     fill: currentColor;
 }
 
-.navigation__link--bottom-border {
-    color: $brand-color;
-}
-
-.navigation__link--bottom-border::after {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: -1px;
 
 
-    height: 4px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 2px;
-    background-color: $brand-color;
-}
+

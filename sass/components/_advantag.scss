@@ -2,21 +2,20 @@
     padding-top: 94px;
     padding-bottom: 94px;
     background-color: $main-background;
-}
 
-.advantag__list {
+
+&__list {
     display: flex;
 }
 
-.advantag__item {
+&__item {
     width: 270px;
+    &not:last-child {
+            margin-right: 30px;
+}
 }
 
-.advantag__item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.advantag__title {
+&__title {
     margin-bottom: 10px;
     color: $title-color;
 
@@ -27,14 +26,14 @@
     text-transform: uppercase;
 }
 
-.advantag__text {
+&__text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
-.advantag__icon-background {
+&__icon-background {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,4 +43,5 @@
 
     background: $secondary-background;
     border-radius: 4px;
+}
 }

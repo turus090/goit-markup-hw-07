@@ -1,9 +1,9 @@
 .footer {
-    background-color: #2F303A;
+    background-color: $hero-background;
     padding: 60px 0px;
-}
 
-.footer__container {
+
+&__container {
     width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
@@ -13,11 +13,11 @@
 }
 
 
-.footer__logo {
+&__logo {
     display: block;
     margin-bottom: 20px;
 
-    color: #FFFFFF;
+    color: $hero-color;
 
     font-family: raleway, sans-serif;
     font-weight: 700;
@@ -27,16 +27,16 @@
     text-decoration: none;
 }
 
-.footer__logo-accent {
+&__logo-accent {
     color: $brand-color;
 }
 
-.footer__text {
+&__text {
     display: block;
     line-height: 24px;
 }
 
-.footer__address {
+&__address {
 
     color: #FFFFFF;
 
@@ -47,7 +47,7 @@
     letter-spacing: 0.03em;
 }
 
-.footer__address-contacts {
+&__address-contacts {
     display: flex;
     margin-top: 9px;
     line-height: 24px;
@@ -55,14 +55,15 @@
     text-decoration: none;
 
     transition: background-color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $brand-color;
+    }
 }
 
-.footer__address-contacts:hover,
-.footer__address-contacts:focus {
-    color: $brand-color;
-}
 
-.footer-slogan {
+&-slogan {
     color: $hero-color;
     font-weight: 700;
     font-size: 14px;
@@ -71,74 +72,69 @@
     letter-spacing: 0.03em;
 }
 
-.footer-accession {
+&-accession {
     margin-left: 70px;
     margin-right: auto;
-}
 
-.footer-accession__list {
+
+&__list {
     display: flex;
     margin-top: 20px;
     justify-content: center;
     gap: 10px;
 }
 
-.footer-accession__link {
-    color: $hero-color;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color $transition-duration $transition-timing-function;
-}
-
-.footer-accession__link:hover,
-.footer-accession__link:focus {
-    color: $main-background;
-    background-color: $brand-color;
-}
-
-
-
-
-
-.footer-accession__link {
+&__link {
     display: flex;
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
+    
+        width: 44px;
+        height: 44px;
+    
+        color: $hero-color;
+    background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    
+        transition: background-color $transition-duration $transition-timing-function,
+            color $transition-duration $transition-timing-function;
+    
 
-    width: 44px;
-    height: 44px;
-
-    color: $icon-color;
-
-    border-radius: 50%;
-
-    transition: background-color $transition-duration $transition-timing-function,
-        color $transition-duration $transition-timing-function;
+    
+    &:hover,
+    &:focus {
+        color: $main-background;
+        background-color: $brand-color;
+    }
 }
 
-.footer-accession__icon {
+
+
+
+&__icon {
 
     fill: currentColor;
 }
+}
 
-.footer-form__wrapper {
+.footer-form {
+
+&__wrapper {
     display: flex;
     align-items: center;
 
     margin-top: 20px;
-
 }
 
-.footer-form__label {
+
+
+&__label {
     display: flex;
 }
 
-.footer-form__input:hover,
-.footer-form__input:focus {
-    border: 1px solid $brand-color;
-    outline: none;
-}
 
-.footer-form__input {
+
+&__input {
     width: 358px;
     height: 50px;
     padding-left: 16px;
@@ -146,24 +142,29 @@
     padding-bottom: 15px;
 
     color: $hero-color;
-    background-color: #2F303A;
+    background-color: $hero-background;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     cursor: pointer;
     outline: none;
-    transition: border-color $transition-timing-function $transition-duration,
+    transition: border-color $transition-timing-function $transition-duration;
 
+    &:hover,
+    &:focus {
+        border: 1px solid $brand-color;
+        outline: none;
+    }
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+    
+        color: $contact-color;
+        outline: none;
+    }
 }
-
-.footer-form__input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-
-    color: rgba(255, 255, 255, 0.6);
-    outline: none;
 }
 
 .footer__button {
@@ -173,15 +174,19 @@
     transition: box-shadow $transition-duration $transition-timing-function,
         background-color $transition-duration $transition-timing-function,
         color $transition-duration $transition-timing-function;
-}
 
-.footer__button:hover {
-    background-color: #188CE8
-}
+        &:hover {
+        background-color: $backgraund-hover;
+    }
+    
 
-.footer__button-title {
+
+
+&-title {
     margin-left: 29px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
 }
+
+}}
