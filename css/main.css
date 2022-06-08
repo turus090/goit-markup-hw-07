@@ -3,35 +3,35 @@
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("../../fonts/roboto-400.woff"), url("../../fonts/roboto-400.woff2");
+  src: url("../fonts/roboto-400.woff"), url("../fonts/roboto-400.woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: auto;
-  src: url("../../fonts/roboto-500.woff"), url("../../fonts/roboto-500.woff2");
+  src: url("../fonts/roboto-500.woff"), url("../fonts/roboto-500.woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: auto;
-  src: url("../../fonts/roboto-700.woff"), url("../../fonts/roboto-700.woff2");
+  src: url("../fonts/roboto-700.woff"), url("../fonts/roboto-700.woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url("../../fonts/roboto-900.woff"), url("../../fonts/roboto-900.woff2");
+  src: url("../fonts/roboto-900.woff"), url("../fonts/roboto-900.woff2");
 }
 @font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("../../fonts/raleway-700.woff"), url("../../fonts/raleway-700.woff2");
+  src: url("../fonts/raleway-700.woff"), url("../fonts/raleway-700.woff2");
 }
 body {
   color: #757575;
